@@ -8,40 +8,40 @@ Date: 4/18/18
 
 ### Conceptual Description
 
-Replace with a description of the critical / conceptual dimensions of your project. What is your project about? What issues/topics are you engaging with. What should the user take away from your piece?    
+This project is a thorough visualization to highlight the significance of a global issue. Pollution in China, as well as the world, is at an all time high, and this piece aims to capture the catastrophic increase of pollution. In northern China, air pollution from the burning of fossil fuels, principal coal, is causing people to die on average 5.5 years sooner than they otherwise might. Lung cancer is a widespread thing and only seems to get worse. 
 
 ### Interaction Description
 
-Replace with a description of the interactive dimensions of your project.  How do you expect users to interact with your piece. How is your piece to be set up in physical space? Who is the intended audience? How does your piece inform the user through interaction or amplifies those your project's main concepts and ideas?
+Simply click through the piece.
 
 ### Extension 
 
-Do you intend to extend a piece that you've created throughout the semester? What elements are you adding or subtracting from the previous piece? How do these extensions/subtractions further develop the conceptual and interactive elements of your work?
-
-![Previous Piece](previous_piece.png)
+I plan on extending the Visualization project from earlier this semester. I plan on adding various elements, including background images, important events throughout the timeline, possibly links after the viewer is finished with the piece, etc. These extensions will provide the viewer a greater feel of the issue at hand and potentially motivate the viewer to immediately help.
 
 ### Drawing or Sketch of Extended Piece
 
-![Sketch of Extended Piece](extended_piece.png)
+![Sketch](InteractiveGraphicsFinalFlowChart.png)
 
 ### Technical Details
-//   
-Here you should give an overview of the technical aspects of your project:
-* Libraries your using
-* Hosting Platform (Heroku, Github Pages)
-* Explanation of your codebase  
-//
 
-You can include code snippets here:
+Using p5.js, hosted on GitHub Pages
 
+Snippets:
 ```js
-functions setup(){
-
-}
-
-function draw(){
-
+// increases the year displayed each mouse click, until the last year which displays a warning...
+function mousePressed() {
+    clicks = clicks + 1;
+    if (clicks < years.length){
+        middletext = years[clicks];
+        for (var i = 0; i < n; i++){
+            var ratio = co2[clicks]/co2[co2.length-1];
+            mols[i].sizee = random(0.75,1.25)*ratio*500;
+            mols[i].col = color((1-ratio)*random(200,255), (1-ratio)*random(200,255), (1-ratio)*random(200,255), random(20,50));
+        }
+    } else {
+        middletext = "This is a serious problem."
+    }
 }
 ```
 
-Link to your project's full code in this repository:  [https://github.com/duke-interactive-graphics/face-osc](https://github.com/duke-interactive-graphics/face-osc)
+Link to your project's full code in this repository: WIP
