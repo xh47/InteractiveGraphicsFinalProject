@@ -31,3 +31,9 @@ https://www.des.nh.gov/organization/divisions/air/tsb/ams/aqmdp/share.htm
 How to help globally:
 
 http://www.greenpeace.org/eastasia/
+
+---
+
+Or check out more work from this semester:
+
+https://xh47.github.io/InteractiveGraphicsPortfolio/
